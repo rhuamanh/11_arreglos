@@ -1,28 +1,27 @@
-//ejercicio de arreglos 2
 #include <iostream>
 using namespace std;
-int main (){
-	int n, i, j, num, p, r, z;
-	int arreglo [n];
-	cout << "ingrese la cantidad de elementos:";
-	cin >> n;
-	for (i=0; i<=n; i++){
-		cout << "ingrese el numero del elemento:";
-		cin >> num;
-		p=0;
-		r=0;
-		if (num % 2 ==0){
-			for (j=0; j<=p; j++){
-				int arreglo [j];
-			}
-		} else{
-			for (z=0; z=r; z++){
-				int arreglo [z];
-			}
+int main(){
+	int numeros[100],pares[100], impares[100], n, p=0, im=0;
+	cout<<"ingrese el numero de elementos:";
+	cin>>n;
+	for (int i=0; i<n; i++){
+		cout<<"ingrese el elemento:";
+		cin>>numeros[i];
+		if (numeros[i]%2==0){
+			pares[p]=numeros[i];
+			p++;
+		}else{
+			impares[im]=numeros[i];
+			im++;
 		}
 	}
-	cout << arreglo [n] << endl << endl;
-	cout << arreglo [j] << endl << endl;
-	cout << arreglo [z] << endl << endl;
+	cout<<"los numeros pares son:"<<endl;
+	for(int i=0; i<p; i++){
+			cout<<pares[i]<<endl;
+	}
+	cout<<"los numeros impares son:"<<endl;
+	for(int i=0; i<im; i++){
+		cout<<impares[i]<<endl;
+	}
 	return 0;
 }
