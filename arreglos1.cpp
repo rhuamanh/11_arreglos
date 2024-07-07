@@ -1,26 +1,23 @@
-//ejercicio de arreglos 1 
 #include <iostream>
 using namespace std;
 int main (){
-	int n, num, i, c, s;
-	float p;
-	int arreglo [n];
-	i=0;
-	s=0;
+	int numeros[1000], n, s;
+	float p, c;
+	cout<<"ingrese el numero de elementos:";
+	cin>>n;
 	c=0;
-	cout << "ingrese la cantidad total de numeros:";
-	cin >> n;
-	for (i=0; i<=n; i++){
-		if (arreglo[i]!=0){
-			cout << "ingrese el valor del primer numero:";
-			cin >> num;
-			s = s + num;
-		} else if (arreglo[i]==0){
+	s=0;
+	for (int i=0; i<n; i++){
+		cout<<i+1<<".Ingrese el elemento:";
+		cin>>numeros[i];
+		if (numeros[i]!=0){
+			s=s+numeros[i];
+		}else if(numeros[i]==0){
 			c=c+1;
 		}
 	}
-	p = (c/n)*100;
-	cout << "la sumatoria es:" << s << endl;
-	cout << "el porcentaje de ceros es:" << p << endl;
+	p=(c/n)*100;
+	cout<<"las suma de los elementos es:"<<s<<endl;
+	cout<<"el porcentaje de ceros es:"<<p<<endl;
 	return 0;
 }
